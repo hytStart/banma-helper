@@ -1,0 +1,84 @@
+{
+    "ajaxGet": {
+        "prefix": "ajaxGet",
+        "body": [
+            "const params = {}",
+            "const url = '${1:/test}'",
+            "$.ajax({",
+            "\turl,",
+            "\ttype: 'GET',",
+            "\tdatatype: 'json',",
+            "\tdata: { ...params }",
+            "}).done(res => {",
+            "\tconst { code, data, message } = res || {}",
+            "\tif (code === 0) {",
+            "\t\tBmSuccess('success')",
+            "\t} else {",
+            "\t\tBmWarning(message)",
+            "\t}",
+            "}).fail(err => {",
+            "\tBmWarning(err)",
+            "})"
+        ],
+        "description": "Code snippet for \"Ajax Get\""
+    },
+    "ajaxPost": {
+        "prefix": "ajaxPost",
+        "body": [
+            "const params = {}",
+            "const url = '${1:/test}'",
+            "$.ajax({",
+            "\turl,",
+            "\ttype: 'POST',",
+            "\tdatatype: 'json',",
+            "\tdata: { ...params }",
+            "}).done(res => {",
+            "\tconst { code, data, message } = res || {}",
+            "\tif (code === 0) {",
+            "\t\tBmSuccess('success')",
+            "\t} else {",
+            "\t\tBmWarning(message)",
+            "\t}",
+            "}).fail(err => {",
+            "\tBmWarning(err)",
+            "})"
+        ],
+        "description": "Code snippet for 'Ajax Post'"
+    },
+    "httpGet": {
+        "prefix": "httpGet",
+        "body": [
+            "const params = {}",
+            "const url = `${this.PATH_PREFIX.AI}${this.API.TOOL.MSGBOX.FETCH_MSG}`",
+            "this.\\$http.get(url, { params }).then(result => {",
+            "\tconst { code, msg, data } = result",
+            "\tif (code === 0) {",
+            "\t\tthis.\\$message.success('success')",
+            "\t} else {",
+            "\t\tthis.\\$message.error(msg)",
+            "\t}",
+            "}).catch(err => {",
+            "\tthis.\\$message.error(err)",
+            "})"
+        ],
+        "description": "Code snippet for \"axios Http Get\""
+    },
+    "httpPost": {
+        "prefix": "httpPost",
+        "body": [
+            "const params = {}",
+            "const url = `${this.PATH_PREFIX.AI}${this.API.TOOL.MSGBOX.FETCH_MSG}`",
+            "this.\\$http.post(url, { ...params }).then(result => {",
+            "\tconst { code, msg, data } = result",
+            "\tif (code === 0) {",
+            "\t\tthis.\\$message.success('success')",
+            "\t} else {",
+            "\t\tthis.\\$message.error(msg)",
+            "\t}",
+            "}).catch(err => {",
+            "\tthis.\\$message.error(err)",
+            "})"
+        ],
+        "description": "Code snippet for \"axios Http Post\""
+    }
+}

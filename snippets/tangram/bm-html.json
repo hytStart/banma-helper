@@ -1,0 +1,684 @@
+{
+    "bm-alert": {
+        "prefix": "bm-alert",
+        "body": [
+            "<bm-alert",
+            "\ttitle=\"success\"",
+            "\ttype=\"success\">",
+            "</bm-alert>"
+        ],
+        "description": "alert"
+    },
+    "bm-alert:icon": {
+        "prefix": "bm-alert:icon",
+        "body": [
+            "<bm-alert",
+            "\ttitle=\"success\"",
+            "\ttype=\"success\"",
+            "\tshow-icon>",
+            "</bm-alert>"
+        ]
+    },
+    "bm-autocomplete": {
+        "prefix": "bm-autocomplete",
+        "body": [
+            "<bm-autocomplete v-model=\"$1\" placeholder=\"\" :fetch-suggestions=\"fetchSuggestions\" @select=\"handleSelect\">",
+            "</bm-autocomplete>"
+        ]
+    },
+    "bm-badge": {
+        "prefix": "bm-badge",
+        "body": "<bm-badge :value=\"$1\"/>"
+    },
+    "bm-badge:button": {
+        "prefix": "bm-badge:button",
+        "body": [
+            "<bm-badge :value=\"$1\">",
+            "\t<bm-button size=\"small\">$2</bm-button>",
+            "</bm-badge>"
+        ]
+    },
+    "bm-badge:dot": {
+        "prefix": "bm-badge:dot",
+        "body": "<bm-badge is-dot>$1</bm-badge>"
+    },
+    "bm-breadcrumb": {
+        "prefix": "bm-breadcrumb",
+        "body": [
+            "<bm-breadcrumb separator=\"/\">",
+            "\t<bm-breadcrumb-item :to=\"{ path: '/' }\"></bm-breadcrumb-item>",
+            "\t<bm-breadcrumb-item></bm-breadcrumb-item>",
+            "</bm-breadcrumb>"
+        ]
+    },
+    "bm-button": {
+        "prefix": "bm-button",
+        "body": "<bm-button type=\"primary\">$1</bm-button>"
+    },
+    "bm-button-group": {
+        "prefix": "bm-button-group",
+        "body": [
+            "<bm-button-group>",
+            "\t<bm-button type=\"primary\">$1</bm-button>",
+            "\t<bm-button type=\"primary\">$2</bm-button>",
+            "</bm-button-group>"
+        ]
+    },
+    "bm-card": {
+        "prefix": "bm-card",
+        "body": [
+            "<bm-card>",
+            "\t<div slot=\"header\">$1</div>",
+            "\t<div></div>",
+            "</bm-card>"
+        ]
+    },
+    "bm-carousel": {
+        "prefix": "bm-carousel",
+        "body": [
+            "<bm-carousel height=\"150px\">",
+            "\t<bm-carousel-item>",
+            "\t\t$1",
+            "\t</bm-carousel-item>",
+            "</bm-carousel>"
+        ]
+    },
+    "bm-carousel:card": {
+        "prefix": "bm-carousel:card",
+        "body": [
+            "<bm-carousel type=\"card\" height=\"150px\">",
+            "\t<bm-carousel-item>",
+            "\t\t$1",
+            "\t</bm-carousel-item>",
+            "</bm-carousel>"
+        ]
+    },
+    "bm-cascadar": {
+        "prefix": "bm-cascadar",
+        "body": [
+            "<bm-cascader",
+            "\t:options=\"$1\"",
+            "\tv-model=\"$2\"",
+            "\t@change=\"$3\">",
+            "</bm-cascader>"
+        ]
+    },
+    "bm-checkbox": {
+        "prefix": "bm-checkbox",
+        "body": "<bm-checkbox v-model=\"$1\" >$2</bm-checkbox>"
+    },
+    "bm-checkbox-button": {
+        "prefix": "bm-checkbox-button",
+        "body": "<bm-checkbox-button :label=\"$1\" :key=\"$2\" >$3</bm-checkbox-button>"
+    },
+    "bm-checkbox-group": {
+        "prefix": "bm-checkbox-group",
+        "body": [
+            "<bm-checkbox-group v-model=\"$1\">",
+            "\t<bm-checkbox :label=\"${2:label}\" :key=\"${3:key}\">$3</bm-checkbox>",
+            "</bm-checkbox-group>"
+        ]
+    },
+    "bm-col": {
+        "prefix": "bm-col",
+        "body": "<bm-col :span=\"$1\"></bm-col>"
+    },
+    "bm-collapse": {
+        "prefix": "bm-collapse",
+        "body": [
+            "<bm-collapse v-model=\"${1:activeName}\" @change=\"${2:collapseChange}\">",
+            "\t<bm-collapse-item title=\"${3:title}\" name=\"${4:name}\">",
+            "\t\t<div>$5</div>",
+            "\t</bm-collapse-item>",
+            "</bm-collapse>"
+        ]
+    },
+    "bm-color-picker": {
+        "prefix": "bm-color-picker",
+        "body": "<bm-color-picker v-model=\"${1:color}\"></bm-color-picker>"
+    },
+    "bm-date-picker": {
+        "prefix": "bm-date-picker",
+        "body": "<bm-date-picker v-model=\"$1\" type=\"date\" placeholder=\"${2:date}\"></bm-date-picker>"
+    },
+    "bm-date-picker:datetime": {
+        "prefix": "bm-date-picker:datetime",
+        "body": "<bm-date-picker v-model=\"$1\" type=\"datetime\" placeholder=\"${2:datetime}\"></bm-date-picker>"
+    },
+    "bm-dialog": {
+        "prefix": "bm-dialog",
+        "body": [
+            "<bm-dialog",
+            "\ttitle=\"\"",
+            "\t:visible.sync=\"${1:dialogVisible}\"",
+            "\twidth=\"${2:width}\"",
+            "\t:before-close=\"${3:dialogBeforeClose}\">",
+            "\t<div>$4</div>",
+            "\t<div slot=\"footer\">",
+            "\t\t<bm-button @click=\"dialogVisible = false\">取 消</bm-button>",
+            "\t\t<bm-button type=\"primary\" @click=\"dialogVisible = false\">确 定</bm-button>",
+            "\t</div>",
+            "</bm-dialog>"
+        ]
+    },
+    "bm-dialog:form": {
+        "prefix": "bm-dialog:form",
+        "body": [
+            "<bm-dialog",
+            "\ttitle=\"\"",
+            "\t:visible.sync=\"${1:dialogVisible}\"",
+            "\twidth=\"${2:width}\"",
+            "\t:before-close=\"${3:dialogBeforeClose}\">",
+            "\t<bm-form :model=\"form\">",
+            "\t\t<bm-form-item label=\"\" :label-width=\"\">",
+            "\t\t\t<bm-input v-model=\"\"></bm-input>",
+            "\t\t</bm-form-item>",
+            "\t</bm-form>",
+            "\t<div slot=\"footer\">",
+            "\t\t<bm-button @click=\"dialogVisible = false\">取 消</bm-button>",
+            "\t\t<bm-button type=\"primary\" @click=\"dialogVisible = false\">确 定</bm-button>",
+            "\t</div>",
+            "</bm-dialog>"
+        ]
+    },
+    "bm-dropdown": {
+        "prefix": "bm-dropdown",
+        "body": [
+            "<bm-dropdown>",
+            "\t<bm-button type=\"primary\">",
+            "\t\t下拉菜单<i class=\"bm-icon-arrow-down bm-icon--right\"></i>",
+            "\t</bm-button>",
+            "\t<bm-dropdown-menu slot=\"dropdown\">",
+            "\t\t<bm-dropdown-item>黄金糕</bm-dropdown-item>",
+            "\t</bm-dropdown-menu>",
+            "</bm-dropdown>"
+        ]
+    },
+    "bm-form": {
+        "prefix": "bm-form",
+        "body": [
+            "<bm-form ref=\"${1:form}\" :model=\"${2:form}\" label-width=\"${3:80px}\">",
+            "\t$4",
+            "</bm-form>"
+        ]
+    },
+    "bm-form:inline": {
+        "prefix": "bm-form:inline",
+        "body": [
+            "<bm-form :inline=\"true\" ref=\"${1:form}\" :model=\"${2:form}\" label-width=\"${3:80px}\">",
+            "\t$4",
+            "</bm-form>"
+        ]
+    },
+    "bm-form-item:input": {
+        "prefix": "bm-form-item:input",
+        "body": [
+            "<bm-form-item label=\"${1:label}\">",
+            "\t<bm-input v-model=\"${2:model}\"></bm-input>",
+            "</bm-form-item>"
+        ]
+    },
+    "bm-form-item:checkbox": {
+        "prefix": "bm-form-item:checkbox",
+        "body": [
+            "<bm-form-item label=\"${1:label}\">",
+            "\t<bm-checkbox-group v-model=\"${2:model}\">",
+            "\t\t<bm-checkbox label=\"${3:label}\" name=\"${4:name}\"></bm-checkbox>",
+            "\t</bm-checkbox-group>",
+            "</bm-form-item>"
+        ]
+    },
+    "bm-form-item:radio": {
+        "prefix": "bm-form-item:radio",
+        "body": [
+            "<bm-form-item label=\"${1:label}\">",
+            "\t<bm-radio-group v-model=\"${2:model}\">",
+            "\t\t<bm-radio label=\"${3:label}\"></bm-radio>",
+            "\t</bm-radio-group>",
+            "</bm-form-item>"
+        ]
+    },
+    "bm-form-item:select": {
+        "prefix": "bm-form-item:select",
+        "body": [
+            "<bm-form-item label=\"${1:label}\">",
+            "\t<bm-select v-model=\"${2:model}\" placeholder=\"${3:placeholder}\">",
+            "\t\t<bm-option label=\"${4:label}\" value=\"${5:value}\"></bm-option>",
+            "\t</bm-select>",
+            "</bm-form-item>"
+        ]
+    },
+    "bm-form-item:switch": {
+        "prefix": "bm-form-item:switch",
+        "body": [
+            "<bm-form-item label=\"${1:label}\">",
+            "<bm-switch v-model=\"${2:model}\"></bm-switch>",
+            "</bm-form-item>"
+        ]
+    },
+    "bm-form-item:textarea": {
+        "prefix": "bm-form-item:textarea",
+        "body": [
+            "<bm-form-item label=\"${1:label}\">",
+            "<bm-input type=\"textarea\" v-model=\"${2:model}\"></bm-input>",
+            "</bm-form-item>"
+        ]
+    },
+    "bm-input": {
+        "prefix": "bm-input",
+        "body": "<bm-input v-model=\"$1\" placeholder=\"$2\"></bm-input>"
+    },
+    "bm-input-number": {
+        "prefix": "bm-input-number",
+        "body": "<bm-input-number v-model=\"$1\" @change=\"${2:inputChange}\" :min=\"${3:1}\" :max=\"${4:10}\" label=\"${5:label}\"></bm-input-number>"
+    },
+    "bm-input:textarea": {
+        "prefix": "bm-input:textarea",
+        "body": "<bm-input type=\"textarea\" v-model=\"$1\" placeholder=\"$2\"></bm-input>"
+    },
+    "bm-menu": {
+        "prefix": "bm-menu",
+        "body": [
+            "<bm-menu :default-active=\"${1:activeIndex}\" mode=\"horizontal\" @select=\"${2:menuSelect}\">",
+            "\t<bm-menu-item index=\"${3:index}\">$4</bm-menu-item>",
+            "</bm-menu>"
+        ]
+    },
+    "bm-menu:submenu": {
+        "prefix": "bm-menu:submenu",
+        "body": [
+            "<bm-menu :default-active=\"${1:activeIndex}\" mode=\"horizontal\" @select=\"handleSelect\">",
+            "\t<bm-menu-item index=\"1\"></bm-menu-item>",
+            "\t<bm-submenu index=\"2\">",
+            "\t\t<template slot=\"title\"></template>",
+            "\t\t<bm-menu-item index=\"2-1\"></bm-menu-item>",
+            "\t</bm-submenu>",
+            "</bm-menu>"
+        ]
+    },
+    "bm-pagination": {
+        "prefix": "bm-pagination",
+        "body": [
+            "<bm-pagination",
+            "\tlayout=\"prev, pager, next\"",
+            "\t:total=\"50\">",
+            "</bm-pagination>"
+        ]
+    },
+    "bm-pagination:full": {
+        "prefix": "bm-pagination:full",
+        "body": [
+            "<bm-pagination",
+            "\t@size-change=\"handleSizeChange\"",
+            "\t@current-change=\"handleCurrentChange\"",
+            "\t:current-page=\"pageNum\"",
+            "\t:page-sizes=\"[10, 20, 50]\"",
+            "\t:page-size=\"pageSize\"",
+            "\tlayout=\"total, sizes, prev, pager, next, jumper\"",
+            "\t:total=\"totalCount\">",
+            "</bm-pagination>"
+        ]
+    },
+    "bm-popover": {
+        "prefix": "bm-popover",
+        "body": [
+            "<bm-popover",
+            "\tref=\"popover1\"",
+            "\tplacement=\"top-start\"",
+            "\ttitle=\"标题\"",
+            "\twidth=\"200\"",
+            "\ttrigger=\"hover\"",
+            "\tcontent=\"这是一段内容\">",
+            "</bm-popover>"
+        ]
+    },
+    "bm-popover:insert": {
+        "prefix": "bm-popover:insert",
+        "body": [
+            "<bm-popover",
+            "\tref=\"popover4\"",
+            "\tplacement=\"right\"",
+            "\twidth=\"400\"",
+            "\ttrigger=\"click\">",
+            "\t<div></div>",
+            "</bm-popover>"
+        ]
+    },
+    "bm-progress": {
+        "prefix": "bm-progress",
+        "body": "<bm-progress :percentage=\"${1:30}\"></bm-progress>"
+    },
+    "bm-progress:circle": {
+        "prefix": "bm-progress:circle",
+        "body": "<bm-progress type=\"circle\" :percentage=\"${1:30}\"></bm-progress>"
+    },
+    "bm-progress:inside": {
+        "prefix": "bm-progress:inside",
+        "body": "<bm-progress :text-inside=\"true\" :stroke-width=\"18\" :percentage=\"70\"></bm-progress>"
+    },
+    "bm-radio": {
+        "prefix": "bm-radio",
+        "body": "<bm-radio v-model=\"radio\" label=\"${1:label}\">$2</bm-radio>"
+    },
+    "bm-radio-button": {
+        "prefix": "bm-radio-button",
+        "body": "<bm-radio-button label=\"${1:label}\"></bm-radio-button>"
+    },
+    "bm-radio-group": {
+        "prefix": "bm-radio-group",
+        "body": [
+            "<bm-radio-group v-model=\"${1:model}\">",
+            "\t<bm-radio :label=\"${2:label}\">$3</bm-radio>",
+            "</bm-radio-group>"
+        ]
+    },
+    "bm-rate": {
+        "prefix": "bm-rate",
+        "body": "<bm-rate v-model=\"$1\"></bm-rate>"
+    },
+    "bm-rate:color": {
+        "prefix": "bm-rate:color",
+        "body": [
+            "<bm-rate",
+            "\tv-model=\"${1:model}\"",
+            "\t:colors=\"['#99A9BF', '#F7BA2A', '#FF9900']\">",
+            "</bm-rate>"
+        ]
+    },
+    "bm-rate:half": {
+        "prefix": "bm-rate:half",
+        "body": [
+            "<bm-rate",
+            "\tv-model=\"3.7\"",
+            "\tdisabled",
+            "\tshow-score",
+            "\ttext-color=\"#ff9900\"",
+            "\tscore-template=\"{value}\">",
+            "</bm-rate>"
+        ]
+    },
+    "bm-row": {
+        "prefix": "bm-row",
+        "body": [
+            "<bm-row :gutter=\"${1:10}\">",
+            "\t<bm-col :span=\"${2:6}\">$3</bm-col>",
+            "</bm-row>"
+        ]
+    },
+    "bm-select": {
+        "prefix": "bm-select",
+        "body": [
+            "<bm-select v-model=\"model\" placeholder=\"\">",
+            "\t<bm-option",
+            "\t\tv-for=\"item in options\"",
+            "\t\t:key=\"item.value\"",
+            "\t\t:label=\"item.label\"",
+            "\t\t:value=\"item.value\">",
+            "\t</bm-option>",
+            "</bm-select>"
+        ]
+    },
+    "bm-slider": {
+        "prefix": "bm-slider",
+        "body": "<bm-slider v-model=\"${1:30}\"></bm-slider>"
+    },
+    "bm-steps": {
+        "prefix": "bm-steps",
+        "body": [
+            "<bm-steps :active=\"active\" finish-status=\"success\">",
+            "\t<bm-step title=\"step1\"></bm-step>",
+            "</bm-steps>"
+        ]
+    },
+    "bm-steps:simple": {
+        "prefix": "bm-steps:simple",
+        "body": [
+            "<bm-steps simple>",
+            "\t<bm-step title=\"step1\"></bm-step>",
+            "</bm-steps>"
+        ]
+    },
+    "bm-steps:icon": {
+        "prefix": "bm-steps:icon",
+        "body": [
+            "<bm-steps :active=\"active\" finish-status=\"success\">",
+            "\t<bm-step title=\"step1\" icon=\"bm-icon-edit\"></bm-step>",
+            "</bm-steps>"
+        ]
+    },
+    "bm-switch": {
+        "prefix": "bm-switch",
+        "body": "<bm-switch v-model=\"${1:model}\" active-color=\"${2:#13ce66}\" inactive-color=\"${3:#ff4949}\"></bm-switch>"
+    },
+    "bm-tabs": {
+        "prefix": "bm-tabs",
+        "body": [
+            "<bm-tabs v-model=\"${1:activeName}\" @tab-click=\"${2:handleClick}\">",
+            "\t<bm-tab-pane label=\"${3:label}\" name=\"${4:name}\">$5</bm-tab-pane>",
+            "</bm-tabs>"
+        ]
+    },
+    "bm-tabs:card": {
+        "prefix": "bm-tabs:card",
+        "body": [
+            "<bm-tabs type=\"card\" v-model=\"${1:activeName}\" @tab-click=\"${2:handleClick}\">",
+            "\t<bm-tab-pane label=\"${3:label}\" name=\"${4:name}\">$5</bm-tab-pane>",
+            "</bm-tabs>"
+        ]
+    },
+    "bm-table": {
+        "prefix": "bm-table",
+        "body": [
+            "<bm-table",
+            "\t:data=\"${1:data}\"",
+            "\tstyle=\"width: 100%\">",
+            "\t<bm-table-column",
+            "\t\tprop=\"${2:prop}\"",
+            "\t\tlabel=\"${3:label}\"",
+            "\t\twidth=\"${4:width}\">",
+            "\t</bm-table-column>",
+            "</bm-table>"
+        ]
+    },
+    "bm-table-column": {
+        "prefix": "bm-table-column",
+        "body": [
+            "<bm-table-column",
+            "\theader-align=\"center\"",
+            "\talign=\"center\"",
+            "\tprop=\"${1:prop}\"",
+            "\tlabel=\"${2:label}\" >",
+            "</bm-table-column>"
+        ]
+    },
+    "bm-table-column:left": {
+        "prefix": "bm-table-column:left",
+        "body": [
+            "<bm-table-column",
+            "\theader-align=\"left\"",
+            "\talign=\"left\"",
+            "\tprop=\"${1:prop}\"",
+            "\tlabel=\"${2:label}\" >",
+            "</bm-table-column>"
+        ]
+    },
+    "bm-table-column:slot": {
+        "prefix": "bm-table-column:slot",
+        "body": [
+            "<template slot-scope=\"scope\">",
+            "\t{{scope.row.status}}",
+            "</template>"
+        ]
+    },
+    "bm-tag": {
+        "prefix": "bm-tag",
+        "body": "<bm-tag type=\"${1:success}\">$2</bm-tag>"
+    },
+    "bm-tag:close": {
+        "prefix": "bm-tag:close",
+        "body": "<bm-tag closable type=\"${1:success}\">$2</bm-tag>"
+    },
+    "bm-time-picker": {
+        "prefix": "bm-time-picker",
+        "body": [
+            "<bm-time-picker",
+            "\tv-model=\"$1\"",
+            "\t:picker-options=\"${2:{ selectableRange: '18:30:00 - 20:30:00' }}\"",
+            "\tplaceholder=\"$3\">",
+            "</bm-time-picker>"
+        ]
+    },
+    "bm-time-select": {
+        "prefix": "bm-time-select",
+        "body": [
+            "<bm-time-select",
+            "\tv-model=\"$1\"",
+            "\t:picker-options=\"${2:{start: '08:30',step: '00:15',end: '18:30'}}\"",
+            "\tplaceholder=\"$3\">",
+            "</bm-time-select>"
+        ]
+    },
+    "bm-tooltip": {
+        "prefix": "bm-tooltip",
+        "body": [
+            "<bm-tooltip effect=\"dark\" content=\"$1\" placement=\"${2:top}\">",
+            "\t<bm-button>$3</bm-button>",
+            "</bm-tooltip>"
+        ]
+    },
+    "bm-tooltip:content": {
+        "prefix": "bm-tooltip:content",
+        "body": [
+            "<bm-tooltip effect=\"dark\" content=\"$1\" placement=\"${2:top}\">",
+            "<div slot=\"content\">$3</div>",
+            "\t<bm-button>$4</bm-button>",
+            "</bm-tooltip>"
+        ]
+    },
+    "bm-transfer": {
+        "prefix": "bm-transfer",
+        "body": [
+            "<bm-transfer",
+            "\tv-model=\"$1\"",
+            "\t:data=\"$2\">",
+            "</bm-transfer>"
+        ]
+    },
+    "bm-transfer:search": {
+        "prefix": "bm-transfer:search",
+        "body": [
+            "<bm-transfer",
+            "\tv-model=\"$1\"",
+            "\t:data=\"$2\">",
+            "\tfilterable",
+            "\t:filter-method=\"\"",
+            "\tfilter-placeholder=\"\">",
+            "</bm-transfer>"
+        ]
+    },
+    "bm-tree": {
+        "prefix": "bm-tree",
+        "body": [
+            "<bm-tree",
+            "\t:data=\"$1\"",
+            "\t:props=\"$2\"",
+            "\t@node-click=\"$3\">",
+            "</bm-tree>"
+        ]
+    },
+    "bm-tree:select": {
+        "prefix": "bm-tree:select",
+        "body": [
+            "<bm-tree",
+            "\tshow-checkbox",
+            "\t:data=\"$1\"",
+            "\t:props=\"$2\"",
+            "\t@node-click=\"$3\">",
+            "</bm-tree>"
+        ]
+    },
+    "bm-upload": {
+        "prefix": "bm-upload",
+        "body": [
+            "<bm-upload",
+            "\taction=\"\"",
+            "\t:on-preview=\"\"",
+            "\t:on-remove=\"\"",
+            "\t:before-remove=\"\"",
+            "\tmultiple",
+            "\t:limit=\"3\"",
+            "\t:on-exceed=\"\"",
+            "\t:file-list=\"[{name: 'name', url: 'url'}]\">",
+            "\t<bm-button size=\"small\" type=\"primary\">点击上传</bm-button>",
+            "\t<div slot=\"tip\" class=\"bm-upload__tip\">只能上传jpg/png文件，且不超过500kb</div>",
+            "</bm-upload>"
+        ]
+    },
+    "bm-upload:avatar": {
+        "prefix": "bm-upload:avatar",
+        "body": [
+            "<bm-upload",
+            "\taction=\"\"",
+            "\t:show-file-list=\"false\"",
+            "\t:on-success=\"\"",
+            "\t:before-upload=\"\">",
+            "\t<img v-if=\"imageUrl\" :src=\"imageUrl\">",
+            "\t<i v-else class=\"bm-icon-plus avatar-uploader-icon\"></i>",
+            "</bm-upload>"
+        ]
+    },
+    "bm-timeline": {
+        "prefix": "bm-timeline",
+        "body": [
+            "<bm-timeline :reverse=\"reverse\">",
+            "\t<bm-timeline-item",
+            "\t\tv-for=\"(activity, index) in activities\"",
+            "\t\t:key=\"index\"",
+            "\t\t:timestamp=\"activity.timestamp\">",
+            "\t\t{{activity.content}}",
+            "\t</bm-timeline-item>",
+            "</bm-timeline>"
+        ]
+    },
+    "bm-calendar": {
+        "prefix": "bm-calendar",
+        "body": [
+            "<bm-calendar v-model=\"${1:value}\"></bm-calendar>"
+        ]
+    },
+    "bm-image": {
+        "prefix": "bm-image",
+        "body": [
+            "<bm-image",
+            "\tstyle=\"${1:width: 100px; height: 100px}\"",
+            "\t:src=\"${2:url}\"",
+            "\t:fit=\"${3:fit}\">$4</bm-image>"
+        ]
+    },
+    "bm-backtop": {
+        "prefix": "bm-backtop",
+        "body": [
+            "<bm-backtop target=\"${1:.page-component__scroll .bm-scrollbar__wrap}\">$2</bm-backtop>"
+        ]
+    },
+    "bm-infinite-scroll": {
+        "prefix": "bm-infinite-scroll",
+        "body": [
+            "<ul class=\"infinite-list\" v-infinite-scroll=\"load\" style=\"overflow:auto\">",
+            "\t<li v-for=\"i in count\" class=\"infinite-list-item\">{{ i }}</li>",
+            "</ul>"
+        ]
+    },
+    "bm-drawer": {
+        "prefix": "bm-drawer",
+        "body": [
+            "<bm-drawer",
+            "\ttitle=\"${1:我是标题}\"",
+            "\t:visible.sync=\"${2:drawer}\"",
+            "\t:direction=\"${3:direction}\"",
+            "\t:before-close=\"${4:handleClose}\">",
+            "\t${5:<span>我来啦!</span>}",
+            "</bm-drawer>"
+        ]
+    }
+}

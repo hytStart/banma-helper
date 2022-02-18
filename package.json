@@ -1,0 +1,203 @@
+{
+	"name": "banma-helper",
+	"displayName": "banma-helper",
+	"description": "提效工具",
+	"version": "0.2.22",
+	"publisher": "huangyiting",
+	"icon": "logo.png",
+	"engines": {
+		"vscode": "^1.50.0"
+	},
+	"categories": [
+		"Snippets",
+		"Other"
+	],
+	"activationEvents": [
+		"*",
+		"onLanguage:html",
+		"onLanguage:vue",
+		"onLanguage:javascript",
+		"onLanguage:javascriptreact",
+		"onLanguage:typescript",
+		"onLanguage:typescriptreact"
+	],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"configuration": {
+			"title": "banma-helper-strong",
+			"properties": {
+				"banma-helper.strong": {
+					"type": "string",
+					"description": "提肛运动配置",
+					"enum": [
+						"on",
+						"off"
+					],
+					"default": "off",
+					"scope": "window"
+				}
+			}
+		},
+		"keybindings": [
+			{
+				"command": "banma-helper.vue",
+				"key": "ctrl+shift+v",
+				"mac": "cmd+shift+v",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "banma-helper.turing",
+				"key": "ctrl+shift+t",
+				"mac": "cmd+shift+t"
+			},
+			{
+				"command": "banma-helper.git",
+				"key": "ctrl+shift+g",
+				"mac": "cmd+shift+g"
+			},
+			{
+				"command": "banma-helper.request",
+				"key": "ctrl+shift+r",
+				"mac": "cmd+shift+r"
+			}
+		],
+		"commands": [
+			{
+				"command": "banma-helper.vue",
+				"title": "Insert Vue Component Code"
+			},
+			{
+				"command": "banma-helper.turing",
+				"title": "Insert Turing Component File"
+			},
+			{
+				"command": "banma-helper.git",
+				"title": "Git add、commit、push、open皮卡丘"
+			},
+			{
+				"command": "banma-helper.notice",
+				"title": "Ones 提醒"
+			},
+			{
+				"command": "banma-helper.request",
+				"title": "Http Request Tpl"
+			},
+			{
+				"command": "banma-helper.reactpro",
+				"title": "banma -- 插入React Pro代码块"
+			},
+			{
+				"command": "banma-helper.openorigin",
+				"title": "banma -- 打开远程仓库文件"
+			},
+			{
+				"command": "banma-helper.openpr",
+				"title": "banma -- 创建pr"
+			},
+			{
+				"command": "banma-helper.strong",
+				"title": "提gang运动"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"command": "banma-helper.reactpro",
+					"group": "1_Starling",
+					"when": "banma-helper:rightClick"
+				},
+				{
+					"command": "banma-helper.openorigin",
+					"group": "1_Starling"
+				},
+				{
+					"command": "banma-helper.openpr",
+					"group": "1_Starling"
+				}
+			]
+		},
+		"languages": [
+			{
+				"id": "vue",
+				"aliases": [
+					"Vue",
+					"vue"
+				],
+				"extensions": [
+					".vue"
+				]
+			}
+		],
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets/javascript.json"
+			},
+			{
+				"language": "vue",
+				"path": "./snippets/javascript.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/tangram/bm.json"
+			},
+			{
+				"language": "vue-html",
+				"path": "./snippets/tangram/bm-html.json"
+			}
+		],
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "banma-helper",
+					"title": "Banma-Helper",
+					"icon": "./src/resource/assets/helper.svg"
+				}
+			]
+		},
+		"views": {
+			"banma-helper": [
+				{
+					"id": "Helper-git",
+					"name": "01.Git快捷操作"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run package",
+		"compile": "webpack",
+		"watch:web": "cd web && npm run dev",
+		"watch": "webpack --watch",
+		"package": "webpack --mode production --devtool hidden-source-map",
+		"test-compile": "tsc -p ./",
+		"test-watch": "tsc -watch -p ./",
+		"pretest": "yarn run test-compile && yarn run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "1.45.0",
+		"@typescript-eslint/eslint-plugin": "^4.14.1",
+		"@typescript-eslint/parser": "^4.14.1",
+		"eslint": "^7.19.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.2.1",
+		"ts-loader": "^8.0.14",
+		"typescript": "^4.1.3",
+		"vscode-test": "^1.5.0",
+		"webpack": "^5.19.0",
+		"webpack-cli": "^4.4.0"
+	},
+	"dependencies": {
+		"@babel/parser": "^7.14.0",
+		"@babel/traverse": "^7.14.0",
+		"@types/babel__traverse": "^7.14.2",
+		"clipboardy": "^2.3.0",
+		"node-schedule": "^2.0.0",
+		"simple-git": "^2.38.0"
+	}
+}
