@@ -1,30 +1,30 @@
 # banma-helper README
 
-配送FE效率工具。
+FE效率工具。
 
 ## Features
 
-- tangram组件代码片段，关键字连想，自动补齐：在代码中，输入bm-等关键字，自动插入tangram组件代码。
+- tan****组件代码片段，关键字连想，自动补齐：在代码中，输入bm-等关键字，自动插入tan****组件代码。
 
   ![snippets-html.gif](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fda2190752044c029b67912a2aa2450e~tplv-k3u1fbpfcp-watermark.image)
 
 - JQuery ajax请求，axios $http请求代码片段。关键字连想，自动补齐：在代码中，输入ajax或http等关键字，自动插入对应请求代码。
   ![snippets-request.gif](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ea417c8513254124a9a33abf05796c54~tplv-k3u1fbpfcp-watermark.image)
 
-- tangram组件hover，展示属性文档。
+- tan****组件hover，展示属性文档。
 
   ![屏幕录制2021-04-25 下午6.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/044ba8898d4944a6b2d21c186636b15e~tplv-k3u1fbpfcp-watermark.image)
  
 
-- cmd+shift+r(同上，快捷键版本): 自动添加图灵http get/post请求格式代码  
+- cmd+shift+r(同上，快捷键版本): 自动添加A算法系统http get/post请求格式代码  
 
   ![cmd+shift+r.gif](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/336efb9dbc484a458ff61f0597992693~tplv-k3u1fbpfcp-watermark.image)
 
-- cmd+shift+t: 自动添加图灵系统filter + table + edit模板代码  
+- cmd+shift+t: 自动添加A算法系统filter + table + edit模板代码  
 
   ![cmd+shift+t.gif](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d96d0f1c23e34430a7bab514db1955f8~tplv-k3u1fbpfcp-watermark.image)
 
-- cmd+shift+g: 自动执行git add . + git commit + git push origin 当前分支 + 打开皮卡丘（develop, qa分支）  
+- cmd+shift+g: 自动执行git add . + git commit + git push origin 当前分支 + 打开C部署系统（develop, qa分支）  
 
   ![cmd+shift+g.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/72e8ea29ec734bae8141c44f9a83cf7a~tplv-k3u1fbpfcp-watermark.image)
 
@@ -34,7 +34,7 @@
 
 - 右键 - banma -- 自动创建pr：
 
-- 每周五下午三点，提醒填报ones。  
+- 每周五下午三点，提醒填报周报。  
 
   ![WechatIMG17237.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bb299ee3b4a247ab88445f61c4bf1c64~tplv-k3u1fbpfcp-watermark.image)
 
@@ -67,7 +67,7 @@
 ### 0.2.2
 
 - fix: develop, qa 没有commit，push问题
-- feature: ones填报提醒
+- feature: 周报填报提醒
 - style: 增加git提交loading提示
 
 ### 0.2.3
@@ -82,7 +82,7 @@
 - docs: 增加动画演示
 
 ### 0.2.7
-- feature: tangram代码片段
+- feature: tan****代码片段
 - feature: jquery ajax请求，axios http请求代码片段
 
 ### 0.2.8
